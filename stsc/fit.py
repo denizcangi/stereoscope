@@ -224,6 +224,7 @@ def fit_st_data(st_data : D.CountData,
     else:
         w_columns = R.columns.append(pd.Index(["noise"]))
     # normalize to obtain adjusted proportions
+    print(W)
     W = W / W.sum(axis = 1).reshape(-1,1)
     # generate pandas DataFrame from proportions
     W = pd.DataFrame(W,
